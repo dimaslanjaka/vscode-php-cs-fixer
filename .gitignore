@@ -6,3 +6,8 @@ extension_pack.js
 extension_pack.js.map
 *.js.map
 tests
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+yarn.lock
+package-lock.json
