@@ -154,7 +154,7 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run build",
+    "vscode:prepublish": "npm run build:es",
     "esbuild-base": "esbuild ./src/index.ts --bundle --outfile=index.js --external:vscode --format=cjs --platform=node",
     "build": "npm run build:es && npm run build:vsix",
     "watch": "npm run -S esbuild-base -- --sourcemap --watch",
