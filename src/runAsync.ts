@@ -1,9 +1,9 @@
-import { spawn, SpawnOptionsWithoutStdio } from 'child_process';
+import { ChildProcessWithoutNullStreams, spawn, SpawnOptionsWithoutStdio } from 'child_process';
 import { output } from './output';
 
 export function runAsync(command: string, args: string[], options: SpawnOptionsWithoutStdio, onData: (data: Buffer) => void = null) {
   const cpOptions = Object.assign({}, options, { shell: process.platform == 'win32' })
-  let cp;
+  let cp: ChildProcessWithoutNullStreams;
   try {
     if (process.platform == 'win32') {
       if (command.includes(" ") && command[0] != '"') {
