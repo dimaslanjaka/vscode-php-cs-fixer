@@ -11,3 +11,4 @@ tests
 !.yarn/plugins
 yarn.lock
 package-lock.json
+index.js
